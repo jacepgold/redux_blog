@@ -7,7 +7,7 @@ const Blog = ({ id, name, complete, dispatch }) => (
     onClick={ () => dispatch(toggleBlog(id)) }
     style={ complete ? { textDecoration: 'line-through' } : {}}
   >
-    {name}
+    <h3>{name}</h3>
   </li>
 )
 
