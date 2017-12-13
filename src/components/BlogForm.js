@@ -4,13 +4,18 @@ import { addBlog } from '../actions/blogs';
 import { incId } from '../actions/nextId';
 
 class BlogForm extends React.Component {
-  state = { name: '' }
+  state = { name: '', complete: false }
+
+  componentDidMount() {
+    if(this.props.completed)
+    this.setState({complete: this.props.complete})
+  }
 
   handleSubmit = (e) => {
     e.preventDefault();
-    const { name } = this.state;
+    const { name, complete } = this.state;
     const { id, dispatch } = this.props;
-    const blog = { id, name };
+    const blog = { id, name, complete };
     dispatch(addBlog(blog))
     dispatch(incId())
     this.setState({ name: '' })

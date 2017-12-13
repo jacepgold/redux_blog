@@ -17,6 +17,7 @@ const BlogList = ({ blogs, filter}) => {
   return(
     <div>
       <ul>
+        
         { filtered(blogs, filter).map(t => <Blog key={t.id} {...t} />) }
       </ul>
     </div>

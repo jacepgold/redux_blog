@@ -4,10 +4,10 @@ import { toggleBlog } from '../actions/blogs';
 
 const Blog = ({ id, name, complete, dispatch }) => (
   <li
-    onClick={ () => dispatch(toggleBlog(id))}
-    style={complete ? { textDecoration: 'line-through' } : {} }
+    onClick={ () => dispatch(toggleBlog(id)) }
+    style={ complete ? { textDecoration: 'line-through' } : {}}
   >
-    { name }
+    {name}
   </li>
 )
 
