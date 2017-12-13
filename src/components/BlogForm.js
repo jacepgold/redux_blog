@@ -30,6 +30,7 @@ class BlogForm extends React.Component {
           required
           value={this.state.name}
           onChange={this.handleChange}
+          placeholder="Create New"
         />
       </form>
     )
